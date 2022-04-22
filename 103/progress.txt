@@ -1,0 +1,12 @@
+0. 檔案名稱:
+
+a="qwertyuiopasdfghjklzxcvbnm1234567890"
+import random
+def get():
+ return "".join([random.choice(a) for i in range(5)])+"-"+"".join([random.choice(a) for i in range(5)])
+
+1. 把"Google Classroom作業上傳說明(iOS版).docx"中的圖片全部替換成小圖(320x568)
+2. 以"bigimagetemplate.html"作為模板，為每張照片製作大圖。
+3. 更新"aymk6-v6nfz.html"。
+4. 對"Google Classroom作業上傳說明(Microsoft Edge on Windows 11).docx"重複1~3步
+5. 上傳
