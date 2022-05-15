@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>PyScript Demo</title>
+  <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+
+<body>
+    <h1>document</h1><br>
+    <div id="document_cmds"></div><br>
+    <h1>element</h1><br>
+    <div id="element_cmds"></div><br>
+    <h1>js</h1><br>
+    <div id="js_cmds"></div><br>
+
+<py-script>
+import js
+from js import document
+for i in dir(document):
+    element = document.createElement('p')
+    element.innerText = i
+    document.getElementById("document_cmds").append(element)
+for i in dir(element):
+    element = document.createElement('p')
+    element.innerText = i
+    document.getElementById("element_cmds").append(element)
+for i in dir(js):
+    element = document.createElement('p')
+    element.innerText = i
+    document.getElementById("js_cmds").append(element)
+
+</py-script>
+
+</body>
+</html>
