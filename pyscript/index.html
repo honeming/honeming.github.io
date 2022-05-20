@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>關於 PyScript</title>
+</head>
+
+<body>
+<h1>關於 PyScript</h1>
+<h2>介紹</h2>
+<p>官網:<a href="http://pyscript.net/">http://pyscript.net/</a></p>
+<p>PyScript 可以把Python程式碼嵌入HTML中執行，並且可使用js模組控制HTML檔案。</p>
+<h2>用法</h2>
+<p>在head中加入<code>&lt;script defer src="https://pyscript.net/alpha/pyscript.js"&gt;&lt;/script&gt;</code>和
+    <code>&lt;link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"&gt;</code></p>
+<p>在HTML檔案中，把Python程式碼使用<code>&lt;py-script&gt;</code>標籤包起來。</p>
+<h2>範例</h2>
+<div style="border: 5px gray solid;width: 1000px;">
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-meta" style="color: rgb(28, 0, 207);">&lt;!DOCTYPE html&gt;</span>
+    <span class="hljs-tag" style="color: rgb(28, 0, 207);">&lt;<span class="hljs-name" style="color: rgb(0, 0, 136);">html</span>&gt;</span>
+       <span class="hljs-tag" style="color: rgb(28, 0, 207);">&lt;<span class="hljs-name" style="color: rgb(0, 0, 136);">head</span>&gt;</span>
+         <span class="hljs-tag" style="color: rgb(28, 0, 207);">&lt;<span class="hljs-name" style="color: rgb(0, 0, 136);">meta</span> <span class="hljs-attr" style="color: rgb(92, 38, 153);">charset</span>=<span class="hljs-string" style="color: rgb(196, 26, 22);">"utf-8"</span>&gt;</span>
+         <span class="hljs-tag" style="color: rgb(28, 0, 207);">&lt;<span class="hljs-name" style="color: rgb(0, 0, 136);">title</span>&gt;</span>PyScript<span class="hljs-tag" style="color: rgb(28, 0, 207);">&lt;/<span class="hljs-name" style="color: rgb(0, 0, 136);">title</span>&gt;</span>
+         <span class="hljs-tag" style="color: rgb(28, 0, 207);">&lt;<span class="hljs-name" style="color: rgb(0, 0, 136);">link</span> <span class="hljs-attr" style="color: rgb(92, 38, 153);">rel</span>=<span class="hljs-string" style="color: rgb(196, 26, 22);">"stylesheet"</span> <span class="hljs-attr" style="color: rgb(92, 38, 153);">href</span>=<span class="hljs-string" style="color: rgb(196, 26, 22);">"https://pyscript.net/alpha/pyscript.css"</span> &gt;</span>
+         <span class="hljs-tag" style="color: rgb(28, 0, 207);">&lt;<span class="hljs-name" style="color: rgb(0, 0, 136);">script</span> <span class="hljs-attr" style="color: rgb(92, 38, 153);">defer</span> <span class="hljs-attr" style="color: rgb(92, 38, 153);">src</span>=<span class="hljs-string" style="color: rgb(196, 26, 22);">"https://pyscript.net/alpha/pyscript.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag" style="color: rgb(28, 0, 207);">&lt;/<span class="hljs-name" style="color: rgb(0, 0, 136);">script</span>&gt;</span>
+       <span class="hljs-tag" style="color: rgb(28, 0, 207);">&lt;/<span class="hljs-name" style="color: rgb(0, 0, 136);">head</span>&gt;</span>
+       <span class="hljs-tag" style="color: rgb(28, 0, 207);">&lt;<span class="hljs-name" style="color: rgb(0, 0, 136);">body</span>&gt;</span>
+       <span class="hljs-tag" style="color: rgb(28, 0, 207);">&lt;<span class="hljs-name" style="color: rgb(0, 0, 136);">py-script</span>&gt;</span>
+       print("Hello World!")
+       <span class="hljs-tag" style="color: rgb(28, 0, 207);">&lt;/<span class="hljs-name" style="color: rgb(0, 0, 136);">py-script</span>&gt;</span>
+       
+       <span class="hljs-tag" style="color: rgb(28, 0, 207);">&lt;/<span class="hljs-name" style="color: rgb(0, 0, 136);">body</span>&gt;</span>
+    <span class="hljs-tag" style="color: rgb(28, 0, 207);">&lt;/<span class="hljs-name" style="color: rgb(0, 0, 136);">html</span>&gt;</span></pre>
+</div>
+<h2>js模組用法</h2>
+<code>import js</code>
+<p></p>
+</body>
+</html>
