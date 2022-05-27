@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>PyScript</title>
+  <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+
+<body>
+    <div id="document_cmds"></div><br>
+
+<py-script>
+import js
+import time
+from js import document
+def func():
+    p=document.createElement('p')
+    p.innerText='hello world'#document.getElementById('iii').value
+    document.getElementById("document_cmds").append(p)
+  
+element = document.createElement('input')
+element.setAttribute('type', 'text')
+element.setAttribute('id', 'iii')
+document.getElementById("document_cmds").append(element)
+p=document.createElement('button')
+p.setAttribute('onclick', 'func()')
+document.getElementById("document_cmds").append(p)
+</py-script>
+
+</body>
+</html>

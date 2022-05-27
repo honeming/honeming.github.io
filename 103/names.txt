@@ -144,7 +144,6 @@ eb
 ec
 ed
 ee
-ef
 eg
 eh
 ei
@@ -599,7 +598,6 @@ q1
 q2
 q3
 q4
-q5
 q6
 q7
 q8
@@ -683,7 +681,6 @@ td
 te
 tf
 tg
-th
 ti
 tj
 tk
@@ -727,7 +724,6 @@ ul
 um
 un
 uo
-up
 uq
 ur
 us
@@ -1258,7 +1254,6 @@ z9
 9h
 9i
 9j
-9k
 9l
 9m
 9n
