@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <title>OAuth2 Redirect URL</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+input{
+    font-family: monospace;
+}
+    </style>
+  </head>
+  <body bgcolor="white">
+    <table>
+      <caption>
+        All arguments in the URL
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Key</th>
+          <th scope="col">Value</th>
+          <th scope="col">Copy</th>
+        </tr>
+      </thead>
+      <tbody id="tb">
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row" colspan="2" id="urlShow"></th>
+        </tr>
+      </tfoot>
+    </table>
+    <script>
+      const params=new URLSearchParams(window.location.search)
+      const table=document.getElementById("tb")
+      var item=null
+      var row=null
+      var maxLength=0
+      params.values().forEach(function(v,x,y){if(v.length>maxLength){maxLength=v.length}})
+      params.keys().forEach(function(value,x,y){
+        item=document.createElement('tr')
+        row=document.createElement('th')
+        row.setAttribute('scope','row')
+        row.innerText=value
+        item.appendChild(row)
+        row=document.createElement('td')
+        row.appendChild(document.createElement('input'))
+        row.firstChild.value=params.get(value)
+        row.firstChild.setAttribute('size',maxLength)
+        row.firstChild.onclick=function(element){element.srcElement.select();document.execCommand('copy')}
+        item.appendChild(row)
+        table.appendChild(item)
+      })
+      document.getElementById("urlShow").innerText=window.location.href.replace(window.location.search,'')
+    </script>
+  </body>
+</html>
